@@ -1,0 +1,246 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Satu Amal",
+    "description": "Satu Amal `RESTful API`"
+  },
+  "host": "localhost:3333/",
+  "basePath": "api/",
+  "tags": [
+    {
+      "name": "District",
+      "description": "CRUD operations about districts"
+    },
+    {
+      "name": "Donation",
+      "description": "CRUD operations about donations"
+    },
+    {
+      "name": "Donation-Payment",
+      "description": "CRUD operations about donation-payment"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/districts": {
+      "get": {
+        "tags": [
+          "District"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/donations": {
+      "get": {
+        "tags": [
+          "Donation"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Donation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Adding new Donation.",
+            "schema": {
+              "$ref": "#/definitions/Donation"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/donations/{id}": {
+      "get": {
+        "tags": [
+          "Donation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Donation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Adding new Attachment.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Attachment"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Donation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/donations/{id}/add-attachments": {
+      "put": {
+        "tags": [
+          "Donation"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Adding new Attachment.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Attachment"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Donation": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Bu Ijah"
+        },
+        "description": {
+          "type": "string",
+          "example": "Sudah 10 Hari tidak makan"
+        },
+        "districtId": {
+          "type": "number",
+          "example": 2
+        }
+      }
+    },
+    "Attachment": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Gambar Bu Ijah"
+        },
+        "url": {
+          "type": "string",
+          "example": "www.awsimage.com/bu-ijah"
+        },
+        "type": {
+          "type": "string",
+          "example": "image"
+        }
+      }
+    }
+  },
+  "servers": [
+    "http://localhost:3333/api/docs"
+  ]
+}
