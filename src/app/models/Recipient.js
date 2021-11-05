@@ -1,6 +1,6 @@
 import Sequelize, { Model } from "sequelize";
 
-class Donation extends Model {
+class Recipient extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -10,8 +10,8 @@ class Donation extends Model {
       },
       {
         sequelize,
-        tableName: "donations",
-        modelName: "Donation",
+        tableName: "recipients",
+        modelName: "Recipient",
       }
     );
 
@@ -23,7 +23,7 @@ class Donation extends Model {
       foreignKey: "attachmentableId",
       constraints: false,
       scope: {
-        attachmentableType: "donation",
+        attachmentableType: "recipient",
       },
     });
 
@@ -31,4 +31,4 @@ class Donation extends Model {
   }
 }
 
-export default Donation;
+export default Recipient;

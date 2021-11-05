@@ -1,12 +1,12 @@
 import Sequelize from "sequelize";
 import databaseConfig from "../config/database";
 
-import Donation from "../app/models/Donation";
+import Recipient from "../app/models/Recipient";
 import Attachment from "../app/models/Attachment";
 import DonationPayment from "../app/models/DonationPayment";
 import District from "../app/models/district";
 
-const models = [Attachment, DonationPayment, Donation, District];
+const models = [Attachment, DonationPayment, Recipient, District];
 
 class Database {
   constructor() {

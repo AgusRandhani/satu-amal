@@ -17,8 +17,8 @@ class District extends Model {
   }
 
   static associate(models) {
-    this.hasMany(models.Donation, {
-      as: "donations",
+    this.hasMany(models.Recipient, {
+      as: "recipients",
       foreignKey: "districtId",
     });
   }

@@ -21,7 +21,7 @@ class Attachment extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Donation, {
+    this.belongsTo(models.Recipient, {
       foreignKey: "attachmentableId",
       constraints: false,
     });
