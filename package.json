@@ -1,9 +1,11 @@
 {
-  "name": "rest-api-travel",
+  "name": "satu-amal",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "license": "MIT",
   "scripts": {
+    "start": "node --inspect -r sucrase/register src/server.js",
     "dev": "nodemon src/server",
     "lint": "yarn eslint --fix src --ext .js",
     "swagger": "node swagger"

@@ -1,0 +1,1 @@
+web: node --inspect -r sucrase/register src/server.js
