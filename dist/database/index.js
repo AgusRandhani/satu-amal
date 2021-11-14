@@ -4,9 +4,9 @@ var _database = require('../config/database'); var _database2 = _interopRequireD
 var _Recipient = require('../app/models/Recipient'); var _Recipient2 = _interopRequireDefault(_Recipient);
 var _Attachment = require('../app/models/Attachment'); var _Attachment2 = _interopRequireDefault(_Attachment);
 var _DonationPayment = require('../app/models/DonationPayment'); var _DonationPayment2 = _interopRequireDefault(_DonationPayment);
-var _district = require('../app/models/district'); var _district2 = _interopRequireDefault(_district);
+var _District = require('../app/models/District'); var _District2 = _interopRequireDefault(_District);
 
-const models = [_Attachment2.default, _DonationPayment2.default, _Recipient2.default, _district2.default];
+const models = [_Attachment2.default, _DonationPayment2.default, _Recipient2.default, _District2.default];
 
 class Database {
   constructor() {
