@@ -11,7 +11,12 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3333/api"
+      "url": "http://localhost:3333/api",
+      "description": "local server (for dev)"
+    },
+    {
+      "url": "https://ancient-fjord-49278.herokuapp.com/api",
+      "description": "production server (using live data)"
     }
   ],
   "tags": [
