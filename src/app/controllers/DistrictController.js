@@ -1,4 +1,4 @@
-import District from "../models/district";
+import District from "../models/District";
 import Sequelize from "sequelize";
 
 class DistrictController {

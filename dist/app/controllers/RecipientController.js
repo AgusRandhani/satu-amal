@@ -1,7 +1,7 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _Recipient = require('../models/Recipient'); var _Recipient2 = _interopRequireDefault(_Recipient);
 
 var _sequelize = require('sequelize');
-var _district = require('../models/district'); var _district2 = _interopRequireDefault(_district);
+var _District = require('../models/District'); var _District2 = _interopRequireDefault(_District);
 
 class RecipientController {
   async index(req, res) {
@@ -18,7 +18,7 @@ class RecipientController {
         attributes: ["id", "name", "createdAt", "updatedAt"],
         include: [
           {
-            model: _district2.default,
+            model: _District2.default,
             attributes: ["id", "name"],
           },
         ],

@@ -1,10 +1,10 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _district = require('../models/district'); var _district2 = _interopRequireDefault(_district);
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _District = require('../models/District'); var _District2 = _interopRequireDefault(_District);
 var _sequelize = require('sequelize'); var _sequelize2 = _interopRequireDefault(_sequelize);
 
 class DistrictController {
   async index(req, res) {
     try {
-      const districts = await _district2.default.findAll({
+      const districts = await _District2.default.findAll({
         attributes: {
           include: [
             [

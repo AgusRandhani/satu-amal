@@ -1,7 +1,7 @@
 import Recipient from "../models/Recipient";
 
 import { Op } from "sequelize";
-import District from "../models/district";
+import District from "../models/District";
 
 class RecipientController {
   async index(req, res) {
