@@ -5,7 +5,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "start": "node --inspect -r sucrase/register src/server.js",
+    "start": "node dist/server.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
     "dev": "nodemon src/server",
     "lint": "yarn eslint --fix src --ext .js",
     "swagger": "node swagger"

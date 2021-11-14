@@ -1,0 +1,27 @@
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _sequelize = require('sequelize'); var _sequelize2 = _interopRequireDefault(_sequelize);
+
+class District extends _sequelize.Model {
+  static init(sequelize) {
+    super.init(
+      {
+        name: _sequelize2.default.STRING,
+      },
+      {
+        sequelize,
+        tableName: "districts",
+        modelName: "District",
+      }
+    );
+
+    return this;
+  }
+
+  static associate(models) {
+    this.hasMany(models.Recipient, {
+      as: "recipients",
+      foreignKey: "districtId",
+    });
+  }
+}
+
+exports. default = District;
