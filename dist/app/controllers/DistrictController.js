@@ -9,9 +9,9 @@ class DistrictController {
           include: [
             [
               _sequelize2.default.literal(`(
-                  select count(*) from donations where district_id = "District"."id"
+                  select count(*) from recipients where district_id = "District"."id"
                 )`),
-              "donation_count",
+              "recipient_count",
             ],
           ],
           exclude: ["createdAt", "updatedAt"],
