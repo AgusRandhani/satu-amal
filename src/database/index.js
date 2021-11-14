@@ -4,7 +4,7 @@ import databaseConfig from "../config/database";
 import Recipient from "../app/models/Recipient";
 import Attachment from "../app/models/Attachment";
 import DonationPayment from "../app/models/DonationPayment";
-import District from "../app/models/district";
+import District from "../app/models/District";
 
 const models = [Attachment, DonationPayment, Recipient, District];
 
