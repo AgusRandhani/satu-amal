@@ -1,8 +1,11 @@
 /* eslint-disable prettier/prettier */
-require('dotenv').config()
+require("dotenv").config();
 
 module.exports = {
-  dialect: 'postgres',
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: true,
+  },
   host: process.env.DB_HOST,
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
@@ -13,4 +16,4 @@ module.exports = {
     underscored: true,
     underscoredAll: true,
   },
-}
+};
