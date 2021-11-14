@@ -64,3 +64,10 @@ $ yarn dev
 
 6.Run the project and access the documentation at:
 http://localhost:3333/api/docs/#
+https://ancient-fjord-49278.herokuapp.com/api/docs/#/
+
+#Deployment step
+set deployment branch , commit change
+yarn build
+git push origin master
+git push heroku master
